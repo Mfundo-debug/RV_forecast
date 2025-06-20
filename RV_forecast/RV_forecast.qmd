@@ -74,21 +74,21 @@ By forecasting residual values accurately, Avis can make data-driven decisions t
 
 #### **1. Introduction & Context**
 
--    Clear explanation of **residual value (RV%)** and its importance in **fleet management**.
+-   Clear explanation of **residual value (RV%)** and its importance in **fleet management**.
 
 -   Relevance to Avis: helps guide leasing, resale, and rotation decisions.
 
 #### **2. Dataset Overview**
 
--    Rich dataset covering **multiple car makes and models from 2009 onward**.
+-   Rich dataset covering **multiple car makes and models from 2009 onward**.
 
 -   Removed irrelevant columns, handled data limitations (e.g., year-only time resolution).
 
-#### **3. Exploratory Data Analysis (EDA)** 
+#### **3. Exploratory Data Analysis (EDA)**
 
 -   Analyzed RV% trends across **seven major makes** (AUDI, ISUZU, NISSAN, MERCEDES-BENZ, BMW, TOYOTA, VOLKSWAGEN).
 
--    Identified and visualized **top 3 models per make** with line plots.
+-   Identified and visualized **top 3 models per make** with line plots.
 
 -   Generated **descriptive statistics** (min, max, median, std, year span).
 
@@ -96,27 +96,31 @@ By forecasting residual values accurately, Avis can make data-driven decisions t
 
 #### **4. Strategic Insight**
 
--    Added **make-level leaderboard**: TOYOTA and VOLKSWAGEN show strong retention; BMW and LAND ROVER are more volatile.
+-   Added **make-level leaderboard**: TOYOTA and VOLKSWAGEN show strong retention; BMW and LAND ROVER are more volatile.
 
 -   Used these insights to justify which models to analyze deeper.
 
-#### **5. Forecasting** 
+#### **5. Forecasting**
 
 -   Forecasted RV% for **7 selected models** using **linear regression**.
 
--    Presented both:
+-   Presented both:
 
-    -   **Tables** with predicted RV% for next 3 years
+```         
+-   **Tables** with predicted RV% for next 3 years
 
-    -   **Line charts** comparing historical vs. forecasted trends
+-   **Line charts** comparing historical vs. forecasted trends
+```
 
--    Provided **interpretation per model**, identifying which are:
+-   Provided **interpretation per model**, identifying which are:
 
-    -    High-retention (safe bets)
+```         
+-    High-retention (safe bets)
 
-    -    Stable commercial assets
+-    Stable commercial assets
 
-    -    Riskier or volatile choices
+-    Riskier or volatile choices
+```
 :::
 
 ```{r setuo, include=FALSE}
@@ -196,9 +200,9 @@ plt.show()
 
 Here is the first exploratory visualization showing the **average residual value percentage (RV%) across all car models over time**. Key insights:
 
--    **Downward trend**: As expected, average RV% declines over the years, which is typical as vehicles depreciate more rapidly in later model years.
+-   **Downward trend**: As expected, average RV% declines over the years, which is typical as vehicles depreciate more rapidly in later model years.
 
--    **Annual granularity** is sufficient for capturing long-term depreciation patterns, especially if our goal is to project future RV% at the model level.
+-   **Annual granularity** is sufficient for capturing long-term depreciation patterns, especially if our goal is to project future RV% at the model level.
 :::
 
 ```{python}
